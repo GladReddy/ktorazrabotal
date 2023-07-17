@@ -1,0 +1,28 @@
+.title {
+	font-size: $fsTitle;
+	line-height: 1.33;
+	margin-bottom: 28px;
+
+	@media #{$small-down} {
+		font-size: $fsDefault;
+		margin-bottom: 24px;
+	}
+}
+
+.list {
+	li {
+		+ li {
+			@media #{$small-down} {
+				margin-top: 8px;
+			}
+		}
+	}
+}
+
+.listColumns {
+	@media #{$medium-up} {
+		display: grid;
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+		gap: $gutter;
+	}
+}

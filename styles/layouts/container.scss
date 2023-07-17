@@ -1,0 +1,12 @@
+.container {
+  width: 100%;
+  max-width: $width;
+  padding-right: $gutter;
+  padding-left: $gutter;
+  margin-right: auto;
+  margin-left: auto;
+
+  @media only screen and (min-width: 1299px) and (max-width: 1832px) {
+    max-width: calc(100% - 44px);
+  }
+}

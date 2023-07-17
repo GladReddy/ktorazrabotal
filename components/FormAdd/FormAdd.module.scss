@@ -1,0 +1,21 @@
+.checkboxList {
+  margin-bottom: 24px;
+
+  @media #{$medium-up} {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+  }
+
+  li {
+    :local(.field) {
+      display: inline-block;
+    }
+
+    + li {
+      @media #{$small-down} {
+        margin-top: 16px;
+      }
+    }
+  }
+}

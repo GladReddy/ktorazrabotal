@@ -1,0 +1,16 @@
+.text {
+  @media #{$medium-up} {
+    padding: 4px 0 0;
+  }
+
+  p {
+    margin: 0;
+    font-size: $fsTitle;
+    line-height: 1.333;
+    color: $cGrey;
+
+    @media #{$small-down} {
+      font-size: $fsDefault;
+    }
+  }
+}

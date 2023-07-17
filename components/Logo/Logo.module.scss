@@ -1,0 +1,33 @@
+.logo {
+	font-size: 0;
+	width: 402px;
+
+	@media #{$small-down} {
+		width: 164px;
+	}
+
+	a {
+		display: flex;
+		align-items: center;
+		text-decoration: none;
+
+		@media #{$small-down} {
+			align-items: flex-start;
+			flex-direction: column;
+		}
+	}
+
+	img {
+		width: 100%;
+
+		&:last-child {
+			margin-left: 12px;
+
+			@media #{$small-down} {
+				width: 150px;
+				margin-left: 0;
+				margin-top: 4px;
+			}
+		}
+	}
+}

@@ -1,0 +1,10 @@
+.wrapper {
+  margin: 177px 0 80px;
+  max-width: 584px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media #{$small-down} {
+    margin: 0;
+  }
+}

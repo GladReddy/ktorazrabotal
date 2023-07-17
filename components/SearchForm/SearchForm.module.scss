@@ -1,0 +1,104 @@
+.form {
+  position: relative;
+  padding-left: 44px;
+  @include placeholder(transparent, transparent);
+  transition: all 0.23s ease;
+
+  &:before {
+    position: absolute;
+    display: block;
+    @include icon-pseudo('loupe--pink');
+    @include center(y);
+    left: 0;
+    opacity: 1;
+    transition: all 0.23s ease;
+  }
+
+  label {
+    position: relative;
+    display: block;
+    margin: 0;
+  }
+
+  input[type=search]::-ms-clear,
+  input[type=search]::-ms-reveal {
+    display: none;
+    width: 0;
+    height: 0;
+  }
+
+  input[type="search"]::-webkit-search-decoration,
+  input[type="search"]::-webkit-search-cancel-button,
+  input[type="search"]::-webkit-search-results-button,
+  input[type="search"]::-webkit-search-results-decoration {
+    display: none;
+  }
+}
+
+
+.formInput {
+  width: 100%;
+  height: 76px;
+  border: 0;
+  outline: 0;
+  margin: 0;
+  padding: 0 20px 0 0;
+  color: $cBlack;
+  text-align: left;
+  font-size: $fsTitle;
+  background: #fff;
+  -webkit-appearance: none;
+
+  @media #{$small-down} {
+    font-size: $fsLarge;
+  }
+}
+
+.formPlaceholder {
+  display: inline-block;
+  position: absolute;
+  top: 0.857em;
+  left: 0;
+  width: auto;
+  user-select: none;
+  pointer-events: none;
+  cursor: text;
+  font-size: $fsTitle;
+  line-height: 1;
+  color: $cGrey;
+  z-index: 120;
+  transition: all 0.23s ease;
+
+  @media #{$small-down} {
+    font-size: $fsLarge;
+  }
+
+  :local(.formInput):focus~&,
+  :local(.formInput):not(:placeholder-shown)~& {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+}
+
+.formClear {
+  position: absolute;
+  @include center(y);
+  right: 0;
+  font-size: 0;
+  z-index: 120;
+  color: $cGrey;
+  background: transparent;
+  border: 0;
+  outline: none !important;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.23s ease;
+
+  &:global(.is-visible) {
+    opacity: 1;
+    pointer-events: auto;
+  }
+}

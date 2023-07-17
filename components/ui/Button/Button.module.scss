@@ -1,0 +1,32 @@
+.btn {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  background: $cBlack;
+  font-size: $fsSmall;
+  font-weight: 400;
+  line-height: 1;
+  cursor: pointer;
+  height: 50px;
+  width: auto;
+  min-width: 160px;
+  margin: 0;
+  padding: 0 15px;
+  outline: none !important;
+  overflow: hidden;
+  text-decoration: none !important;
+  border: 0;
+  transition: background 0.23s ease;
+  //backface-visibility: hidden;
+  z-index: 110;
+
+  @media #{$small-down} {
+    width: 100%;
+  }
+
+  &:hover, &:focus {
+    background: $cPink;
+  }
+}

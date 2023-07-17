@@ -1,0 +1,21 @@
+@use 'sass:math';
+
+.icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+  
+  @at-root svg#{&} {
+  	overflow: initial;
+  }
+}
+
+{{#shapes}}
+.icon-{{base}} {
+	font-size:{{width.inner}}px;
+	height:math.div({{height.inner}},{{width.inner}})*1em;
+}
+{{/shapes}}

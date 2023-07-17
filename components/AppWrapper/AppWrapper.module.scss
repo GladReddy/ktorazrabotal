@@ -1,0 +1,15 @@
+.wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  max-width: 1920px;
+  min-height: 100vh;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media #{$small-down} {
+    @supports (min-height: 100dvh) {
+      min-height: 100dvh;
+    }
+  }
+}

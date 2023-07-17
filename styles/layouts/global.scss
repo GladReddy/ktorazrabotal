@@ -1,0 +1,16 @@
+body {
+  @include font-smoothing;
+  color: $cBlack;
+  font-family: var(--font-ibm);
+  font-weight: 400;
+  font-style: normal;
+  font-size: $fsDefault;
+  line-height: 1.333;
+  background: #fff;
+  direction: ltr;
+  overflow-x: hidden;
+}
+
+.app-main {
+  margin: 80px 0;
+}

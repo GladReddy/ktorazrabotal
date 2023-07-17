@@ -1,0 +1,7 @@
+.wrapper {
+  margin-top: 16px;
+
+  @media #{$small-down} {
+    margin-top: 8px;
+  }
+}

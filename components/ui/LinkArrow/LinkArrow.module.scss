@@ -1,0 +1,19 @@
+.item {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  color: $cBlack;
+
+  :global(.icon) {
+    margin-left: 14px;
+    color: $cGreyD;
+  }
+
+  &:hover, &:active {
+    color: $cPink;
+
+    :global(.icon) {
+      color: inherit;
+    }
+  }
+}

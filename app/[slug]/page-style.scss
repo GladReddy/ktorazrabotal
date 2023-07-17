@@ -1,0 +1,15 @@
+.page-about-layout {
+	justify-content: space-between;
+
+	[class^='AppFooter_wrapper'] {
+		margin-top: 0;
+	}
+
+	.node {
+		.content {
+			@media #{$medium-up} {
+				font-size: $fsLarge;
+			}
+		}
+	}
+}

@@ -1,0 +1,14 @@
+.node {
+  max-width: 870px;
+  margin-left: auto;
+  margin-right: auto;
+
+  &__header {
+    position: relative;
+    margin-bottom: 40px;
+  }
+
+  &__content {}
+
+  &__footer {}
+}

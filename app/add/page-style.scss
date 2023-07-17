@@ -1,0 +1,30 @@
+.page-add-layout {
+	.app-main {
+		display: flex;
+		flex: 1;
+		margin: 0;
+
+		> .container {
+			flex: 1;
+		}
+	}
+}
+
+.add-node {
+	position: relative;
+	max-width: 580px;
+	padding-top: 60px;
+	padding-bottom: 60px;
+	height: 100%;
+
+	@media #{$medium-up} {
+		padding-left: 60px;
+		padding-right: 60px;
+		border-left: 1px solid $cGreyL;
+		border-right: 1px solid $cGreyL;
+	}
+
+	.form {
+		margin-top: -14px;
+	}
+}

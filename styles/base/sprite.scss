@@ -1,0 +1,39 @@
+@use 'sass:math';
+
+.icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+  
+  @at-root svg#{&} {
+  	overflow: initial;
+  }
+}
+
+.icon-arrow {
+	font-size:11px;
+	height:math.div(11.1,11)*1em;
+}
+.icon-cross {
+	font-size:14px;
+	height:math.div(14,14)*1em;
+}
+.icon-loupe {
+	font-size:22px;
+	height:math.div(22,22)*1em;
+}
+.icon-loupe--pink {
+	font-size:22px;
+	height:math.div(22,22)*1em;
+}
+.icon-mark {
+	font-size:10px;
+	height:math.div(7.5,10)*1em;
+}
+.icon-mark--white {
+	font-size:10px;
+	height:math.div(7.5,10)*1em;
+}

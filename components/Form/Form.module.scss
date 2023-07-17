@@ -1,0 +1,248 @@
+.form {
+  :global(.h2) {
+    margin-bottom: 24px;
+  }
+}
+
+.group {
+  margin-bottom: 60px;
+  font-size: 0;
+
+  @media #{$small-down} {
+    margin-bottom: 40px;
+  }
+
+  :local(.field) {
+    position: relative;
+    margin-bottom: 24px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.field {
+  @include placeholder(transparent, transparent);
+
+  label {
+    display: block;
+    position: relative;
+    margin: 0;
+    cursor: pointer;
+    text-align: left;
+  }
+}
+
+.input {
+  display: block;
+  position: relative;
+  border: 0;
+  outline: 0;
+  color: $cBlack;
+  text-align: left;
+  width: 100%;
+  height: 68px;
+  padding: 0;
+  font-size: $fsTitle;
+  z-index: 110;
+
+  @media #{$small-down} {
+    height: 56px;
+    font-size: $fsLarge;
+  }
+
+  &:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 50px #ffffff inset;
+  }
+}
+
+.text,
+.textarea {
+  input, textarea {
+    -webkit-appearance: none;
+
+    &:disabled {
+      color: $cGreyL;
+    }
+  }
+}
+
+.textarea {
+  textarea {
+    font-size: $fsDefault;
+  }
+}
+
+.placeholder {
+  display: inline-block;
+  position: absolute;
+  top: 20px;
+  left: 0;
+  width: auto;
+  user-select: none;
+  font-size: $fsTitle;
+  line-height: 1;
+  color: $cGrey;
+  z-index: 120;
+
+  @media #{$small-down} {
+    top: 18px;
+    font-size: $fsLarge;
+  }
+
+  :local(.input)~& {
+    transition: transform .25s ease-in-out, top .25s ease-in-out;
+    transform-origin: top left;
+  }
+
+  :local(.input):focus~&,
+  :local(.input):not(:placeholder-shown)~& {
+    top: -7px;
+    transform: scale(0.5);
+  }
+
+  textarea:local(.input):focus~&,
+  textarea:local(.input):not(:placeholder-shown)~& {
+    top: -15px;
+  }
+}
+
+.caption {
+  font-size: $fsSmall;
+  color: $cGrey;
+
+  @media #{$small-down} {
+    font-size: 12px;
+  }
+}
+
+.radio {
+  position: relative;
+  font-size: 0;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+
+  >label {
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+    text-align: left;
+    user-select: none;
+    cursor: pointer;
+    padding-left: 32px;
+    font-size: $fsDefault;
+    line-height: 1.33;
+
+    input[type="radio"] {
+      position: absolute;
+      opacity: 0;
+      cursor: pointer;
+      height: 0;
+      width: 0;
+
+      &:checked {
+        ~:local(.radioCheckmark) {
+          border-color: $cGrey;
+
+          &:after {
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+}
+
+.radioCheckmark {
+  position: absolute;
+  top: 0.111em;
+  left: 0;
+  @include square(20px);
+  border: 2px solid $cGreyL;
+  border-radius: 100%;
+  background-color: #fff;
+
+  &:after {
+    content: '';
+    @include square(10px);
+    display: block;
+    position: absolute;
+    @include center;
+    background: $cBlack;
+    border-radius: 100%;
+    opacity: 0;
+    transition: opacity 0.23s ease;
+  }
+}
+
+
+.checkbox {
+  position: relative;
+  font-size: 0;
+  padding: 0;
+  margin: 0;
+  display: block;
+  text-align: left;
+
+  //min-height: 30px;
+  >label {
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+    text-align: left;
+    user-select: none;
+    cursor: pointer;
+    padding-left: 32px;
+    font-size: $fsDefault;
+    line-height: 1.33;
+
+    input[type="checkbox"] {
+      position: absolute;
+      opacity: 0;
+      cursor: pointer;
+      height: 0;
+      width: 0;
+
+      &:checked {
+        ~:local(.checkboxCheckmark) {
+          background-color: $cBlack;
+          border-color: $cBlack;
+          @include bg-icon('/icons/mark--white.svg', '10px');
+        }
+      }
+
+      &:disabled {
+        ~* {
+          opacity: 0.3;
+        }
+
+        ~:local(.checkboxCheckmark) {
+          opacity: 0;
+        }
+      }
+    }
+  }
+}
+
+.checkboxCheckmark {
+  position: absolute;
+  top: 0.111em;
+  left: 0;
+  @include square(20px);
+  border: 2px solid $cGreyL;
+  background-color: #fff;
+}
+
+.errorMessage {  
+  position: absolute;
+  top: 100%;
+  color: $cPink;
+  font-size: $fsSmall;
+  display: block;
+}
+
+.errorInput {
+  position: relative;
+}

@@ -1,0 +1,32 @@
+.wrapper {
+  text-align: center;
+  padding: 100px 0 88px;
+
+  @media #{$small-down} {
+    padding: 80px 0;
+  }
+
+  img {
+    max-width: 552px;
+
+    @media #{$small-down} {
+      width: 240px;
+    }
+  }
+
+  p {
+    font-size: $fsSubtitle;
+    line-height: 1.33;
+    margin-top: 1.333em;
+
+    @media #{$small-down} {
+      font-size: $fsDefault;
+    }
+
+    br {
+      @media #{$small-down} {
+        display: none;
+      }
+    }
+  }
+}

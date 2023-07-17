@@ -1,0 +1,33 @@
+{
+  "name": "ktorazrabotal",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "postinstall": "npx prisma generate",
+    "update-sprite": "svg-sprite -s --symbol-dest public --symbol-sprite sprite.svg public/icons/*.svg --sscss true --symbol-render-scss-dest ../styles/base/sprite.scss --symbol-render-scss-template styles/abstracts/_sprite_template.scss"
+  },
+  "dependencies": {
+    "@prisma/client": "^5.0.0",
+    "@types/node": "20.4.1",
+    "@types/react": "18.2.14",
+    "@types/react-dom": "18.2.6",
+    "classnames": "^2.3.2",
+    "html-react-parser": "^4.0.0",
+    "lodash.debounce": "^4.0.8",
+    "next": "13.4.9",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-hook-form": "^7.45.1",
+    "typescript": "5.1.6"
+  },
+  "devDependencies": {
+    "@types/lodash.debounce": "^4.0.7",
+    "prisma": "^5.0.0",
+    "sass": "^1.63.6",
+    "svg-sprite": "^2.0.2"
+  }
+}
