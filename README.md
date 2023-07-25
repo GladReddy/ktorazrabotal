@@ -2,7 +2,7 @@
 
 Разработка frontend части сервиса, который помогает найти кто работал над сайтом или приложением.
 
-Демо [https://ktorazrabotal.vercel.app/](https://nextjs.org/)
+Демо [https://ktorazrabotal.vercel.app/](https://ktorazrabotal.vercel.app/)
 
 #### Данные для поиска
 - сбер, сбербанк, sber, sber.ru
